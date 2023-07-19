@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kanban Funil</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="kanban-board">
+    <div class="kanban-column" ondragenter="dragEnter(event)" ondragover="dragOver(event)" ondrop="drop(event)">
+      <h3>Caixa de Entrada</h3>
+      <div class="kanban-pipe"></div>
+      <div class="kanban-task" draggable="true" ondragstart="dragStart(event)">Task 1</div>
+      <div class="kanban-task" draggable="true" ondragstart="dragStart(event)">Task 2</div>
+      <button class="add-task-btn" onclick="createTask(this)">Criar Task</button>
+    </div>
+    <div class="kanban-column" ondragenter="dragEnter(event)" ondragover="dragOver(event)" ondrop="drop(event)">
+      <h3>Análise</h3>
+      <div class="kanban-pipe"></div>
+    </div>
+    <div class="kanban-column" ondragenter="dragEnter(event)" ondragover="dragOver(event)" ondrop="drop(event)">
+      <h3>Desenvolvimento</h3>
+      <div class="kanban-pipe"></div>
+    </div>
+    <div class="kanban-column" ondragenter="dragEnter(event)" ondragover="dragOver(event)" ondrop="drop(event)">
+      <h3>Finalizada</h3>
+      <div class="kanban-pipe"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
